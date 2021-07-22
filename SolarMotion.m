@@ -1,9 +1,9 @@
 clear 
-load('/Users/djoroya/Dropbox/My Mac (Deyviss’s MacBook Pro)/Documents/GitHub/ModellingAndControl/TimeSeries/Horti_MED/SPAIN/CLIMA/2020-04-26-SYSCLIMA/A001_UniformFormat/output/Ts_sysclima_02.mat')
+load('data/example.mat')
 %%
 ind = 1.75e5:20:3.6e5;
-LocalTimes = iTs.DateTime(ind)';
-RadMeasure = iTs.DataSet.RadExt(ind);
+LocalTimes = ds.DateTime(ind)';
+RadMeasure = ds.RadExt(ind);
 % Meñaka
 
 Latitud  = 43.349024834327; 
@@ -39,7 +39,7 @@ xlim([LocalTimes(1) LocalTimes(end)])
 
 %%
 ind = 1.75e5:20:1.79e5;
-LocalTimes = iTs.DateTime(ind)';
+LocalTimes = ds.DateTime(ind)';
 Latitud  = 43.349024834327; 
 Longitud = -2.797651290893;
 DGMT = 2; % madrid
