@@ -13,12 +13,12 @@ Longitud = -2.797651290893;
 rad =[];
 HRA = [];
 DGMT = 2; % Madrid
-iter = 0;
-for iLT = LocalTimes
-    iter = iter + 1;
-    rad(iter) = DateTime2Rad(iLT,Longitud,Latitud,DGMT);
-end
+
+
+rad = DateTime2Rad(LocalTimes,Longitud,Latitud,DGMT);
+
 %
+figure(1)
 clf
 subplot(3,1,1)
 

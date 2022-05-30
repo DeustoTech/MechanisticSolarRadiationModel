@@ -1,4 +1,18 @@
-function rad = DateTime2Rad(DateTime,Longitud,Latitud,DGMT)
+function rad = DateTime2Rad(LocalTimes,Longitud,Latitud,DGMT)
+
+
+iter = 0;
+rad = zeros(size(LocalTimes));
+for iLT = LocalTimes
+    iter = iter + 1;
+    rad(iter) = DateTime2RadIter(iLT,Longitud,Latitud,DGMT);
+end
+
+
+end
+%%
+function rad = DateTime2RadIter(DateTime,Longitud,Latitud,DGMT)
+
 
     theta = DateTime2Zenith(DateTime,Longitud,Latitud,DGMT) ;
     
@@ -12,6 +26,4 @@ function rad = DateTime2Rad(DateTime,Longitud,Latitud,DGMT)
 
     end
 
-
 end
-
